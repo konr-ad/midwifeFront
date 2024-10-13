@@ -16,6 +16,7 @@ export class ImageCarouselComponent implements OnInit {
 
   currentImageIndex: number = 0;
   currentImage: string = this.images[0]
+  fadeIn: boolean = true;
 
   ngOnInit() {
     this.startImageRotation();
@@ -23,8 +24,14 @@ export class ImageCarouselComponent implements OnInit {
 
   startImageRotation(): void {
     setInterval(() => {
-        this.currentImageIndex = (this.currentImageIndex +1) % this.images.length;
+      this.fadeIn = false; // Start by setting fadeIn to false (fade-out)
+
+      // Delay to allow fade-out effect
+      setTimeout(() => {
+        this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
         this.currentImage = this.images[this.currentImageIndex];
-      }, 5000);
+        this.fadeIn = true; // Trigger fade-in for the new image
+      }, 700); // Delay for fade-out before changing the image
+    }, 8000); // Change image every 8 seconds
   }
 }

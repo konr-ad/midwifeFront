@@ -1,5 +1,9 @@
 <div class="relative w-full flex items-center justify-center mx-auto max-w-7xl mt-8">
-  <div class="w-4/5 h-1/3 bg-gray-200">
-    <img [src]="currentImage" class="object-cover w-full h-full" alt="Carousel Image">
+  <div class="w-3/5 h-1/5 bg-white">
+    <img [src]="currentImage"
+         [class.opacity-0]="!fadeIn"
+         [class.opacity-100]="fadeIn"
+         class="object-cover w-full h-full rounded-lg transition-opacity duration-1000 ease-in-out"
+         alt="Carousel Image">
   </div>
 </div>
