@@ -7,11 +7,12 @@ import {ConsultListComponent} from './consult-list/consult-list.component';
 import {CourseListComponent} from './course-list/course-list.component';
 import {ContactComponent} from './contact/contact.component';
 import {FooterComponent} from './footer/footer.component';
+import {AboutComponent} from './about/about.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, ImageCarouselComponent, TestimonialsComponent, ConsultListComponent, CourseListComponent, ContactComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, ImageCarouselComponent, TestimonialsComponent, ConsultListComponent, CourseListComponent, ContactComponent, FooterComponent, AboutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
