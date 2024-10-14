@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sub-consult',
@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: './sub-consult.component.html',
   styleUrl: './sub-consult.component.css'
 })
-export class SubConsultComponent {
+export class SubConsultComponent implements OnInit {
+  fadeIn: boolean = false;
 
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.fadeIn = true;
+      }, 100);
+  }
 }
