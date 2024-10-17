@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.fadeIn = true;
-    }, 100);
+    }, 70);
   }
 
 

@@ -1,5 +1,7 @@
-<div class="bg-white">
-    <div class="mx-auto mt-8 max-w-2xl px-4 lg:max-w-7xl">
+<div class="bg-white transition-opacity duration-1000 ease-in-out"
+       [class.opacity-0]="!fadeIn"
+       [class.opacity-100]="fadeIn">
+  <div class="mx-auto mt-8 max-w-2xl px-4 lg:max-w-7xl">
       <div class="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
         <div class="lg:col-span-5 lg:col-start-8">
           <div class="flex justify-between">
@@ -12,7 +14,7 @@
         <div class="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
           <h2 class="sr-only">Images</h2>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 lg:gap-8">
             <img src="https://plus.unsplash.com/premium_photo-1682000381228-ac92ccdc519c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Newborn baby during their first bath consultation." class="rounded-lg lg:col-span-2 lg:row-span-2">
           </div>
         </div>
@@ -29,7 +31,7 @@
           </div>
 
           <form class="mt-12">
-            <button type="submit" class="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Umów konsultację</button>
+            <button type="submit" class="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-600 px-8 py-3 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">Umów konsultację</button>
           </form>
 
           <div class="mt-8 border-t border-gray-200 pt-8">
@@ -57,7 +59,7 @@
 
                 <!-- The transitioning section -->
                 <div [ngClass]="{ 'max-h-0': !isExpanded, 'max-h-[100rem]': isExpanded }"
-                     class="transition-all duration-500 ease-in-out overflow-hidden max-h-0" id="disclosure-1">
+                     class="transition-all duration-1000 ease-in-out overflow-hidden max-h-0" id="disclosure-1">
                   <ul role="list" class="p-0 m-0 text-gray-500">
                     <li>&#x2022; Konsultacja prowadzona przez położną z doświadczeniem</li>
                     <li>&#x2022; Indywidualne podejście do każdego dziecka i rodziny</li>
