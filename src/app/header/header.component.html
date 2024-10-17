@@ -16,13 +16,14 @@
       </button>
     </div>
     <!-- Desktop navigation (visible only on larger screens) -->
-    <div class="hidden lg:flex lg:flex-auto lg:justify-center lg:gap-x-12">
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Home</a>
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">O mnie</a>
-      <a routerLink="/consults" class="text-sm font-semibold leading-6 text-gray-900">Konsultacje</a>
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Kursy</a>
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Kontakt</a>
-      <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Sklep</a>
+    <div class="hidden lg:flex lg:flex-auto lg:justify-center lg:gap-x-12 text-sm font-semibold leading-6 text-gray-900">
+      <a routerLink="">Home</a>
+      <a routerLink="/about">O mnie</a>
+      <a routerLink="/consults">Konsultacje</a>
+      <a routerLink="/courses">Kursy</a>
+      <a routerLink="/contact">Kontakt</a>
+      <a href="https://www.lactusia.pl" target="_blank" rel="noopener noreferrer">Sklep</a>
+
     </div>
   </nav>
 
@@ -43,13 +44,13 @@
       </div>
       <div class="mt-6 flow-root">
         <div class="-my-6 divide-y divide-gray-500/10">
-          <div class="space-y-2 py-6">
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">O mnie</a>
-            <a routerLink="/consults" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Konsultacje</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Kursy</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Kontakt</a>
-            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sklep</a>
+          <div class="space-y-2 py-6 ">
+            <a routerLink="" (click)="closeMobileMenu()" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+            <a routerLink="/about" (click)="closeMobileMenu()" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">O mnie</a>
+            <a routerLink="/consults" (click)="closeMobileMenu()" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Konsultacje</a>
+            <a routerLink="/courses" (click)="closeMobileMenu()" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Kursy</a>
+            <a routerLink="/contact" (click)="closeMobileMenu()" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Kontakt</a>
+            <a href="https://www.lactusia.pl" (click)="closeMobileMenu()" target="_blank" rel="noopener noreferrer" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Sklep</a>
           </div>
         </div>
       </div>
