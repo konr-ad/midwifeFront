@@ -24,14 +24,14 @@ export class ImageCarouselComponent implements OnInit {
 
   startImageRotation(): void {
     setInterval(() => {
-      this.fadeIn = false; // Start by setting fadeIn to false (fade-out)
+      this.fadeIn = false;
 
       // Delay to allow fade-out effect
       setTimeout(() => {
         this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
         this.currentImage = this.images[this.currentImageIndex];
-        this.fadeIn = true; // Trigger fade-in for the new image
-      }, 700); // Delay for fade-out before changing the image
-    }, 8000); // Change image every 8 seconds
+        this.fadeIn = true;
+      }, 700);
+    }, 8000);
   }
 }
