@@ -1,9 +1,12 @@
 import {Component, OnInit} from '@angular/core';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-sub-consult',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './sub-consult.component.html',
   styleUrl: './sub-consult.component.css'
 })

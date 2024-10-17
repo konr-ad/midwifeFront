@@ -1,1 +1,120 @@
-<p>consult-details1 works!</p>
+<div class="bg-white">
+    <div class="mx-auto mt-8 max-w-2xl px-4 lg:max-w-7xl">
+      <div class="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
+        <div class="lg:col-span-5 lg:col-start-8">
+          <div class="flex justify-between">
+            <h1 class="text-xl font-medium text-gray-900">Pierwsza wspólna kąpiel maluszka</h1>
+            <p class="text-xl font-medium text-gray-900">200PLN</p>
+          </div>
+        </div>
+
+        <!-- Image gallery -->
+        <div class="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
+          <h2 class="sr-only">Images</h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+            <img src="https://plus.unsplash.com/premium_photo-1682000381228-ac92ccdc519c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Newborn baby during their first bath consultation." class="rounded-lg lg:col-span-2 lg:row-span-2">
+          </div>
+        </div>
+
+        <div class="mt-8 lg:col-span-5">
+          <!-- Consultation details -->
+          <div class="mt-10">
+            <h2 class="text-sm font-medium text-gray-900">Opis Konsultacji</h2>
+
+            <div class="prose prose-sm mt-4 text-gray-500">
+              <p>Nasza konsultacja "Pierwsza wspólna kąpiel maluszka" pomoże nowym rodzicom zrozumieć i opanować techniki kąpieli noworodka w sposób bezpieczny i komfortowy. Podczas spotkania omówimy nie tylko jak przygotować maluszka do kąpieli, ale także jak zadbać o jego skórę i samopoczucie.</p>
+              <p>Konsultacja prowadzona jest przez doświadczoną położną oraz Certyfikowanego Doradcę Laktacyjnego, który zapewni profesjonalne wsparcie i odpowiedzi na wszystkie pytania rodziców.</p>
+            </div>
+          </div>
+
+          <form class="mt-12">
+            <button type="submit" class="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Umów konsultację</button>
+          </form>
+
+          <div class="mt-8 border-t border-gray-200 pt-8">
+            <div class="divide-y divide-gray-200">
+              <div>
+                <h3>
+                  <!-- Expand/collapse question button -->
+                  <button type="button" class="group relative flex w-full items-center justify-between py-6 text-left"
+                          aria-controls="disclosure-1" (click)="toggleList()" [attr.aria-expanded]="isExpanded">
+                    <!-- Open: "text-indigo-600", Closed: "text-gray-900" -->
+                    <span class="text-sm font-medium text-gray-900">Dodatkowe informacje</span>
+                    <span class="ml-6 flex items-center">
+                      <!-- Plus icon when closed -->
+                      <svg *ngIf="!isExpanded" class="block h-6 w-6 text-gray-400 group-hover:text-gray-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                      </svg>
+                      <!-- Minus icon when open -->
+                      <svg *ngIf="isExpanded" class="block h-6 w-6 text-indigo-400 group-hover:text-indigo-500" fill="none"
+                           viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15"/>
+                      </svg>
+                    </span>
+                  </button>
+                </h3>
+
+                <!-- The transitioning section -->
+                <div [ngClass]="{ 'max-h-0': !isExpanded, 'max-h-[100rem]': isExpanded }"
+                     class="transition-all duration-500 ease-in-out overflow-hidden max-h-0" id="disclosure-1">
+                  <ul role="list" class="p-0 m-0 text-gray-500">
+                    <li>&#x2022; Konsultacja prowadzona przez położną z doświadczeniem</li>
+                    <li>&#x2022; Indywidualne podejście do każdego dziecka i rodziny</li>
+                    <li>&#x2022; Praktyczne porady dotyczące pielęgnacji niemowlaka</li>
+                    <li>&#x2022; Możliwość zadawania pytań i omówienia szczególnych przypadków</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- More sections... -->
+            </div>
+          </div>
+
+          <!-- Policies -->
+          <section aria-labelledby="policies-heading" class="mt-10">
+            <h2 id="policies-heading" class="sr-only">Nasze zasady</h2>
+
+            <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+              <div class="rounded-lg border border-gray-200 bg-gray-50 p-6 text-center">
+                <dt>
+                  <svg class="mx-auto h-6 w-6 flex-shrink-0 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64" />
+                  </svg>
+                  <span class="mt-4 text-sm font-medium text-gray-900">Wizyty domowe</span>
+                </dt>
+                <dd class="mt-1 text-sm text-gray-500">Umów wizytę telefonicznie, dzwoniąc pod podany numer. Wizyty dostosowane do potrzeb rodziców i maluszka.</dd>
+              </div>
+              <div class="rounded-lg border border-gray-200 bg-gray-50 p-6 text-center">
+                <dt>
+                  <svg class="mx-auto h-6 w-6 flex-shrink-0 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  <span class="mt-4 text-sm font-medium text-gray-900">Wsparcie laktacyjne i opieka noworodkowa</span>
+                </dt>
+                <dd class="mt-1 text-sm text-gray-500">Pomoc w karmieniu piersią, pielęgnacji noworodka i wsparcie w pierwszych tygodniach życia maluszka. Umów wizytę telefonicznie.</dd>
+              </div>
+              <div class="rounded-lg border border-gray-200 bg-gray-50 p-6 text-center">
+                <dt>
+                  <svg class="mx-auto h-6 w-6 flex-shrink-0 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  <span class="mt-4 text-sm font-medium text-gray-900">Indywidualne podejście</span>
+                </dt>
+                <dd class="mt-1 text-sm text-gray-500">Każda konsultacja jest dopasowana do potrzeb Twojej rodziny. Skontaktuj się, aby ustalić szczegóły i zakres wizyty.</dd>
+              </div>
+              <div class="rounded-lg border border-gray-200 bg-gray-50 p-6 text-center">
+                <dt>
+                  <svg class="mx-auto h-6 w-6 flex-shrink-0 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  <span class="mt-4 text-sm font-medium text-gray-900">Elastyczne godziny wizyt</span>
+                </dt>
+                <dd class="mt-1 text-sm text-gray-500">Dostosuj termin wizyty do swojego harmonogramu. Położna dostępna w dogodnych dla Ciebie godzinach.</dd>
+              </div>
+            </dl>
+          </section>
+        </div>
+      </div>
+    </div>
+</div>
