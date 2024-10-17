@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ContactComponent} from '../contact/contact.component';
 import {CourseListComponent} from '../course-list/course-list.component';
 import {ConsultListComponent} from '../consult-list/consult-list.component';
@@ -20,6 +20,14 @@ import {ImageCarouselComponent} from '../image-carousel/image-carousel.component
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  fadeIn: boolean = false;
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.fadeIn = true;
+    }, 100);
+  }
+
 
 }

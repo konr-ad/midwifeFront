@@ -1,6 +1,10 @@
-<app-image-carousel></app-image-carousel>
-<app-about></app-about>
-<app-testimonials></app-testimonials>
-<app-consult-list></app-consult-list>
-<app-course-list></app-course-list>
-<app-contact></app-contact>
+<div class="transition-opacity duration-1000 ease-in-out"
+     [class.opacity-0]="!fadeIn"
+     [class.opacity-100]="fadeIn">
+  <app-image-carousel></app-image-carousel>
+  <app-about></app-about>
+  <app-testimonials></app-testimonials>
+  <app-consult-list></app-consult-list>
+  <app-course-list></app-course-list>
+  <app-contact></app-contact>
+</div>
