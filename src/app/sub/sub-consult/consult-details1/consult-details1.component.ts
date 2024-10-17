@@ -1,12 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {NgClass, NgIf} from '@angular/common';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-consult-details1',
   standalone: true,
   imports: [
     NgClass,
-    NgIf
+    NgIf,
+    RouterLink
   ],
   templateUrl: './consult-details1.component.html',
   styleUrl: './consult-details1.component.css'

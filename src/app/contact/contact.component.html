@@ -1,4 +1,6 @@
-<div class="relative isolate bg-white border-t-2 mx-6 lg:mx-28">
+<div class="relative isolate bg-white border-t-2 mx-6 lg:mx-28 transition-opacity duration-1000 ease-in-out"
+     [class.opacity-0]="!fadeIn"
+     [class.opacity-100]="fadeIn">
   <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
     <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-24">
       <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
