@@ -17,11 +17,11 @@
     </div>
     <!-- Desktop navigation (visible only on larger screens) -->
     <div class="hidden lg:flex lg:flex-auto lg:justify-center lg:gap-x-12 text-sm font-semibold leading-6 text-gray-900">
-      <a routerLink="">Home</a>
-      <a routerLink="/about">O mnie</a>
-      <a routerLink="/consults">Konsultacje</a>
-      <a routerLink="/courses">Kursy</a>
-      <a routerLink="/contact">Kontakt</a>
+      <a routerLink="" routerLinkActive="border-b-2 border-gray-400" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/about" routerLinkActive="border-b-2 border-gray-400">O mnie</a>
+      <a routerLink="/consults" routerLinkActive="border-b-2 border-gray-400">Konsultacje</a>
+      <a routerLink="/courses" routerLinkActive="border-b-2 border-gray-400">Kursy</a>
+      <a routerLink="/contact" routerLinkActive="border-b-2 border-gray-400">Kontakt</a>
       <a href="https://www.lactusia.pl" target="_blank" rel="noopener noreferrer">Sklep</a>
 
     </div>
