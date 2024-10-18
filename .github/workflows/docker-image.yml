@@ -1,0 +1,22 @@
+name: Build and Publish image to Docker Hub
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+
+  publish_images:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: build image
+      run: docker build . -t kon2rad/midwife-app:latest
+    - name: push image to docker hub
+      run: |
+        docker push kon2rad/midwife-app:latest
