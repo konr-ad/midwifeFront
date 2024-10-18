@@ -11,7 +11,7 @@ export const appConfig: ApplicationConfig = {
       withInMemoryScrolling({
         scrollPositionRestoration: 'enabled',
       }),
-      withComponentInputBinding() // Enables component input bindings in standalone components
+      withComponentInputBinding()
     )
   ]
 };
