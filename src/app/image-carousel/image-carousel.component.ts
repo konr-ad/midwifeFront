@@ -1,9 +1,12 @@
 import {Component, OnInit} from '@angular/core';
+import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-image-carousel',
   standalone: true,
-  imports: [],
+  imports: [
+    NgIf
+  ],
   templateUrl: './image-carousel.component.html',
   styleUrl: './image-carousel.component.css'
 })
@@ -17,6 +20,7 @@ export class ImageCarouselComponent implements OnInit {
   currentImageIndex: number = 0;
   currentImage: string = this.images[0]
   fadeIn: boolean = true;
+  isClicked: boolean = false;
 
   ngOnInit() {
     this.startImageRotation();
@@ -33,5 +37,9 @@ export class ImageCarouselComponent implements OnInit {
         this.fadeIn = true;
       }, 700);
     }, 8000);
+  }
+
+  versionButtonClick(): void {
+    this.isClicked = !this.isClicked;
   }
 }
