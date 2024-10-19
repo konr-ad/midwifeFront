@@ -1,11 +1,13 @@
 <header class="bg-white">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-    <div class="flex lg:flex-1">
-      <a routerLink="" class="-m-1.5 p-1.5">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6" aria-label="Global">
+    <!-- Logo aligned to the left -->
+    <div class="justify-start md:ml-20">
+      <a routerLink="">
         <span class="sr-only">LactusiaImg</span>
-        <img class="h-16 w-auto" src="https://lactusia.pl/skins/default/rwd_shoper/images/logo.jpg" alt="">
+        <img class="h-16 w-auto" src="https://lactusia.pl/skins/default/rwd_shoper/images/logo.jpg" alt="logo">
       </a>
     </div>
+
     <!-- Button to open the mobile menu (visible only on mobile) -->
     <div class="flex lg:hidden">
       <button (click)="openMobileMenu()" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
@@ -15,20 +17,21 @@
         </svg>
       </button>
     </div>
-    <!-- Desktop navigation (visible only on larger screens) -->
-    <div class="hidden lg:flex lg:flex-auto lg:justify-center lg:gap-x-12 text-sm font-semibold leading-6 text-gray-900">
-      <a routerLink="" routerLinkActive="border-b-2 border-gray-400" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-      <a routerLink="/about" routerLinkActive="border-b-2 border-gray-400">O mnie</a>
-      <a routerLink="/consults" routerLinkActive="border-b-2 border-gray-400">Konsultacje</a>
-      <a routerLink="/courses" routerLinkActive="border-b-2 border-gray-400">Kursy</a>
-      <a routerLink="/contact" routerLinkActive="border-b-2 border-gray-400">Kontakt</a>
-      <a href="https://www.lactusia.pl" target="_blank" rel="noopener noreferrer">Sklep</a>
 
+    <!-- Desktop navigation (visible only on larger screens) -->
+    <div class="hidden lg:flex lg:flex-auto justify-end md:gap-x-8 text-sm font-semibold leading-6 text-gray-90 md:mr-20">
+      <!-- Add `gap-x-6` to reduce the gap between the navigation links -->
+      <a class="hover:border-b-2 transition" routerLink="" routerLinkActive="border-b-2 border-gray-400" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a class="hover:border-b-2 transition" routerLink="/about" routerLinkActive="border-b-2 border-gray-400">O mnie</a>
+      <a class="hover:border-b-2 transition" routerLink="/consults" routerLinkActive="border-b-2 border-gray-400">Konsultacje</a>
+      <a class="hover:border-b-2 transition" routerLink="/courses" routerLinkActive="border-b-2 border-gray-400">Kursy</a>
+      <a class="hover:border-b-2 transition" routerLink="/contact" routerLinkActive="border-b-2 border-gray-400">Kontakt</a>
+      <a class="hover:border-b-2 transition" href="https://www.lactusia.pl" target="_blank" rel="noopener noreferrer">Sklep</a>
     </div>
   </nav>
 
   <!-- Mobile menu, shown when isMobileMenuOpen is true -->
-  <div *ngIf="isMobileMenuOpen" class="lg:hidden transition" role="dialog" aria-modal="true">
+  <div *ngIf="isMobileMenuOpen" class="md:hidden transition" role="dialog" aria-modal="true">
     <div class="fixed inset-0 z-10"></div>
     <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
       <div class="flex items-center justify-between">
